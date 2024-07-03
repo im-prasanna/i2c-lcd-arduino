@@ -1,0 +1,10 @@
+# Implemented display functions for HD44780 LCD controller with PCF8574T I2C controller
+
+lcd_init(uint8_t address, bool N, bool F) - N=1 2line N=0 1 line, F=1 5x10 font F=0 5x8 font
+lcd_clear() - Clears Display
+lcd_returnHome() - Returns cursor to address 0
+lcd_entryModeSet(bool ID, bool S) - ID=1 increment ID=0 decrement (cursor), S=1 with display shift S=0 no display shift
+lcd_displayControl(bool D, bool C, bool B) - D=1 Display On, C=1 Cursor on, B=1 cursor position blinking on
+lcd_close_i2c() - Close the i2c connection
+lcd_backlight(bool state) - set Backlight
+lcd_print(char *s) - Display the string
